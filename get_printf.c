@@ -22,24 +22,24 @@ int _printf(const char *format, ...)
 			args++;
 			if(args == '\0')
 			{
-				return (chara_print);
+				return (char_print);
 			}
 			else if(args == 'c')
 			{
-				char c = va_arg(*formant, int);
+				char c = va_arg(args, int);
 				write(1, &c, 1);
-				chara_print++;
+				char_print++;
 			}
 			else if(args == 's')
 			{
-				char *str = va_arg(*formant, char*);
+				char *str = va_arg(args, char*);
 				int str_len = 0;
 				if(str == NULL)
 					str = "(null)";
 				while (str[str_len] != '\0')
 					str_len++;
 				write(1, str, str_len);
-				chara_print += str_len;
+				char_print += str_len;
 			}
 			else if(args == '%')
 				{
@@ -50,18 +50,17 @@ int _printf(const char *format, ...)
 					else
 					{
 						write(1, args, 1);
-						chara_print++;
+						char_print++;
 					}
 				}
 			else if (args == 'd' || args == 'i')
 			{
 			    
-			chara_print += print_num(args);
-			write(1, &chara_print, 4);
+			char_print += print_num(args);
+			write(1, &char_print, 4);
 			}
 		}
 		args++;
 	}
 	va_end(args);
-	va_end(*formant);
-	return chara_print;
+	return char_print;
