@@ -65,3 +65,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	va_end(*formant);
 	return chara_print;
+}
