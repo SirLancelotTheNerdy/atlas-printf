@@ -1,5 +1,3 @@
-/*will refrence the outcome of get_ to displsy printf*/
-
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
