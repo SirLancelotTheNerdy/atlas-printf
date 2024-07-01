@@ -86,18 +86,18 @@ int _printf(const char *format, ...)
 			{
 				char c = va_arg(*formant, int);
 				write(1, &c, 1);
-				chara_print++;
+				char_print++;
 			}
 			else if(args == 's')
 			{
-				char *str = va_arg(*formant, char*);
+				char *str = va_arg(*format, char*);
 				int str_len = 0;
 				if(str == NULL)
 					str = "(null)";
 				while (str[str_len] != '\0')
 					str_len++;
 				write(1, str, str_len);
-				chara_print += str_len;
+				char_print += str_len;
 			}
 			else if(args == '%')
 				{
