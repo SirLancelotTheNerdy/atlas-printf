@@ -1,4 +1,18 @@
-This code snippet is a simplified version of the printf function in C programming language. Here is an explanation of how the code works:
+Name: _printf a function that prints a string with am undefined # of aruments
+Synopsis: this is where we put the flowchart
+Options: describe %c %d %float
+Exsamples: KISS onlt need on _printf 
+Exit Values: what the fuction returns 
+Bugs: wtf is wrong with this bitch 
+Author: mostly me but Ptrick helped like a good little boy 
+
+
+
+
+
+
+
+/* This code snippet is a simplified version of the printf function in C programming language. Here is an explanation of how the code works:
 
     The function int _printf(const char *format, ...) takes a format string format and a variable number of arguments (...).
     It initializes a counter char_print to keep track of the number of characters printed.
@@ -10,10 +24,4 @@ This code snippet is a simplified version of the printf function in C programmin
     If it's 's', it extracts a string argument, calculates its length, and prints the string.
     If it's '%', it checks if the following character is also '%'. If so, it returns 0, indicating that a single '%' was printed. Otherwise, it simply prints the '%' character.
     If it's 'd' or 'i', it calls a function print_num to print an integer argument and increments char_print.
-
-Here are some key points to note:
-
-    The code snippet is missing the implementation of the print_num function, which is assumed to handle printing integer arguments.
-    There are a few typographical errors in the code, such as using chara_print instead of char_print.
-    The code does not handle all possible format specifiers that printf supports, as it only covers %c, %s, %%, %d, and %i.
-    Overall, this code provides a basic understanding of how a simplified version of printf function can be implemented in C.
+*/
