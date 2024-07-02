@@ -1,27 +1,53 @@
-Name: _printf a function that prints a string with am undefined # of aruments
-Synopsis: this is where we put the flowchart
-Options: describe %c %d %float
-Exsamples: KISS onlt need on _printf 
-Exit Values: what the fuction returns 
-Bugs: wtf is wrong with this bitch 
-Author: mostly me but Ptrick helped like a good little boy 
-
-
-
-
-
-
-
-/* This code snippet is a simplified version of the printf function in C programming language. Here is an explanation of how the code works:
-
-    The function int _printf(const char *format, ...) takes a format string format and a variable number of arguments (...).
-    It initializes a counter char_print to keep track of the number of characters printed.
-    It checks if the format string is NULL and returns -1 if it is.
-    It then starts processing the format string by iterating through each character in the string.
-    If a character is not %, it directly writes the character to the standard output and increments the char_print counter.
-    If a % character is encountered, it checks the next character to determine the type of formatting.
-    If it's 'c', it extracts a character argument using va_arg and prints it.
-    If it's 's', it extracts a string argument, calculates its length, and prints the string.
-    If it's '%', it checks if the following character is also '%'. If so, it returns 0, indicating that a single '%' was printed. Otherwise, it simply prints the '%' character.
-    If it's 'd' or 'i', it calls a function print_num to print an integer argument and increments char_print.
-*/
+.\" Title: _printf V2.4
+.\" Date: July 1, 2024
+.\" Manual: printf(3)
+.\" Source: printf
+.\"
+.\" Name:
+.\" _printf - a function that prints a string with an undefined number of arguments
+.\"
+.\" Synopsis:
+.\" int _printf(const char *format, ...);
+.\"
+.\" Description:
+.\" This function iterates through the given arguments to print with the referenced commands. It then prints the string and returns the length.
+.\"
+.\" Options:
+.\" .IP \[bu] 2
+.\" .B %d:
+.\" Used for formatting integers (whole numbers).
+.\" .IP \[bu] 2
+.\" .B %i:
+.\" Used for formatting integers (whole numbers).
+.\" .IP \[bu] 2
+.\" .B %f:
+.\" Used for formatting floating-point numbers (numbers with decimals).
+.\" .IP \[bu] 2
+.\" .B %c:
+.\" Used for formatting single characters.
+.\" .IP \[bu] 2
+.\" .B %s:
+.\" Used for formatting strings (sequences of characters).
+.\" .IP \[bu] 2
+.\" .B %%:
+.\" Represents a literal percentage sign (%) in the output.
+.\"
+.\" Examples:
+.\" .IP \[bu] 2
+.\" .EX
+.\" _printf("Let's try to printf a simple sentence.\n");
+.\" .EE
+.\" .IP \[bu] 2
+.\" .EX
+.\" _printf("Negative:[%d]\n", -762534);
+.\" .EE
+.\"
+.\" Exit Values:
+.\" Returns the length of the printed string.
+.\"
+.\" Bugs:
+.\" Returns the wrong value for _printf(NULL) and _printf(%).
+.\"
+.\" Author:
+.\" Patrick McKay and Lancelot Gay
+}
